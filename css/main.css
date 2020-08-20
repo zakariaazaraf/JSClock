@@ -1,0 +1,85 @@
+*{
+    box-sizing: border-box;
+}
+
+.container{
+    display:flex;
+    width: 100vw;
+    height:100vh;
+    justify-content: center;
+    align-items: center;
+    background-color: #EEE;
+}
+
+.clockContainer{
+    display:flex;
+    justify-content:center;
+    width:380px;
+    height: 380px;  
+    position:relative;
+    background-color: gray;
+    border-radius:50%;
+    border: 2px solid;
+    
+}
+
+.centerCercle{ 
+    position: absolute;
+    top:50%;
+    transform: translate(0,-50%);
+    background-color: black;
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    z-index:5;
+}
+
+.hour{
+    background-color: #111;
+    height: 35%;
+    width: 7px;
+    position:absolute;
+    z-index:2;
+    transform: translate(0, 42.85%) rotate(0deg); /*to calculate the translateY % 35==>100; 15==>x*/
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+.minute{
+    background-color: #111;
+    height: 40%;
+    width: 4px;
+    position:absolute;
+    z-index:3;
+    transform: translate(0, 25%) rotate(0deg);
+    transform-origin: bottom center;
+    border-radius: 5px;
+    
+}
+
+.second{
+    background-color: red;
+    height: 45%;
+    width: 1px;
+    position:absolute;
+    z-index:4;
+    transform: translate(0, 11.11%) rotate(0deg);
+    transform-origin: bottom center;
+    border-radius: 5px;
+}
+
+.container .spans{
+    position:absolute;
+    z-index:1;
+    height: 50%;
+    width:2px;
+    transform-origin: bottom center;
+}
+
+
+.container .time{
+    position:absolute;
+    z-index:0;
+    color:#111;
+    transform: translate(-50%);
+}
