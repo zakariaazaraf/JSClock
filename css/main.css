@@ -1,5 +1,6 @@
 *{
     box-sizing: border-box;
+    margin: 0
 }
 
 .container{
@@ -35,7 +36,7 @@
 }
 
 .hour{
-    background-color: #111;
+    background-color: #000;
     height: 35%;
     width: 7px;
     position:absolute;
@@ -46,7 +47,7 @@
 }
 
 .minute{
-    background-color: #111;
+    background-color: #000;
     height: 40%;
     width: 4px;
     position:absolute;
